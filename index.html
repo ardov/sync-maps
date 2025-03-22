@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Synchronized Maps</title>
+    <!-- Leaflet CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="maps-container two-maps-mode">
+      <div id="map1" class="map"></div>
+      <div id="map2" class="map"></div>
+      <div id="map3" class="map"></div>
+    </main>
+
+    <!-- Airport Search Container -->
+    <div class="search-container">
+      <div class="search-input-wrapper">
+        <input
+          type="text"
+          id="airport-search"
+          class="search-input"
+          placeholder="City, Country, or Airport Code..."
+          autocomplete="off"
+        />
+        <button
+          id="search-clear"
+          class="search-clear"
+          aria-label="Clear search"
+        >
+          ×
+        </button>
+      </div>
+      <div id="search-suggestions" class="search-suggestions"></div>
+    </div>
+
+    <!-- Custom Controls -->
+    <div class="custom-zoom-controls">
+      <button id="zoom-in" class="zoom-btn" aria-label="Zoom in">+</button>
+      <div class="zoom-divider"></div>
+      <button id="zoom-out" class="zoom-btn" aria-label="Zoom out">−</button>
+      <div class="zoom-divider"></div>
+      <button
+        id="toggle-map-mode"
+        class="toggle-btn"
+        aria-label="Toggle map mode"
+      >
+        <span class="toggle-text">Show 3 Maps</span>
+      </button>
+      <div class="zoom-divider"></div>
+      <button id="share-btn" class="toggle-btn" aria-label="Share current view">
+        <span class="toggle-text">Share</span>
+      </button>
+    </div>
+
+    <!-- Share Notification -->
+    <div id="share-notification" class="share-notification">
+      Link copied to clipboard!
+    </div>
+
+    <!-- Leaflet JavaScript -->
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
